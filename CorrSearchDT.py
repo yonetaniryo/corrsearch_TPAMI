@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from skvideo.io import vread
 from sklearn.preprocessing import StandardScaler
-from sklearn.lda import LDA
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.neighbors import KNeighborsRegressor
 from scipy.signal import medfilt
 from scipy.stats import scoreatpercentile
