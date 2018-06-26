@@ -7,13 +7,10 @@ from sklearn.lda import LDA
 from sklearn.neighbors import KNeighborsRegressor
 from scipy.signal import medfilt
 from scipy.stats import scoreatpercentile
-from scipy.spatial.distance import cdist
 import os
 from subprocess import getoutput
-import glob
 import json
 import csv
-import argparse
 import re
 import warnings
 from tqdm import tqdm
