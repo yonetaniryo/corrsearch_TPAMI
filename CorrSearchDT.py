@@ -187,11 +187,12 @@ class CorrSearch(misc):
         if(force_overwrite):
             getoutput('rm -rf "%s"' % traj_dirname)
             getoutput('rm -rf %s*.csv' % traj_dirname)
-            getoutput('mkdir -p "%s"' % traj_dirname)
         else:
             if(os.path.exists(traj_dirname)):
-                print('Directory exists! If you want to overwrite the trajectory directory, change force_overwrite option to True')
+                print('Directory exists! If you want to overwrite the trajectory directory, change force_overwrite option to True.')
+                print('Please make sure that force_overwrite=True will execute \'rm -rf %s\' and \'rm -rf %s/csv\'.'% (traj_dirname, traj_dirname))
                 return 0
+        getoutput('mkdir -p "%s"' % traj_dirname)
 
         imgs = vread(video_pattern)
         W, H = self.frame_shape
